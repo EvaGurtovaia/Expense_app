@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-import "./ExpenceItem.css";
-import ExpenceDate from "./ExpenceDate";
+import "./ExpenseItem.css";
+import ExpenseDate from "./ExpenseDate";
 import Card from "../UI/Card";
 
-const ExpenceItem = (props) => {
+const ExpenseItem = (props) => {
     const [title, setTitle] = useState(props.title);
 
     const clickHandler = () => {
@@ -12,7 +12,7 @@ const ExpenceItem = (props) => {
     };
     return (
         <Card className="expense-item">
-            <ExpenceDate date={props.date} />
+            <ExpenseDate date={props.date} />
             <div className="expense-item__description">
                 <h2 className="expense-item h2">{title}</h2>
                 <div className="expense-item__price">$ {props.amount}</div>
@@ -22,4 +22,4 @@ const ExpenceItem = (props) => {
     );
 };
 
-export default ExpenceItem;
+export default ExpenseItem;

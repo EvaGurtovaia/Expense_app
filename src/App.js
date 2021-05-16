@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
+import "./components/Expenses/DeleteButton.css";
 
 const dummyExpenses = [
     {
@@ -36,6 +37,9 @@ const App = () => {
         <div>
             <NewExpense onAddExpenses={addExpenseHandler} />
             <Expenses items={expenses} />
+            <div className="delete-expense">
+                <button>Delete an expense</button>
+            </div>
         </div>
     );
 };
